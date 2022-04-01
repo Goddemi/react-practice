@@ -32,7 +32,7 @@ class Habit extends Component {
           <i className="fa solid fa-solid fa-square-minus"></i>
         </button>
         <button className="habit-button habit-trash">
-          <i className="fa-solid fa-trash-can"></i>
+          <i class="fa-solid fa-trash-can"></i>
         </button>
       </li>
     );
