@@ -3,14 +3,10 @@ import React, { Component } from "react";
 class Habit extends Component {
   //결국 자체적으로 가지고 있는 state는 없고 외부적으로 받아오는 오브젝트를 보여주기만 하는 컴포넌트 가 되었따 !
   handleIncrement = () => {
-    this.props.onIncrement(this.props.habit); // this에 target과 같이 정보가 들어있는거네
+    this.props.onIncrement();
   };
-  handleDrecrement = () => {
-    this.props.onDecrement(this.props.habit);
-  };
-  handleDelete = () => {
-    this.props.onDelete(this.props.habit);
-  };
+  handleDrecrement = () => {};
+  handleDelete = () => {};
   render() {
     const { name, count } = this.props.habit;
     return (

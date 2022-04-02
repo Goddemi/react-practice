@@ -18,8 +18,7 @@ class Habits extends Component {
       const habits = [...this.state.habits]; // habits에 있는 배열을 하나하나씩 새로운 배열로 복사해 오는것을 말한다.
       const index = habits.indexOf(habit);
       habits[index].count++;
-      this.setState({ habits: habits }); // this.state가 아닌 이유는 새로운 배열을 만들었기 때문 . key와 const해준 배열의 관계
-      // setState(key: value) 인것. key = value이라면 한번만 써도 된다. 업데이트할 대상이 무엇인가? : habits key가 habits인것
+      this.setState({ habits: habits }); // key와 const해준 배열의 관계
     }
   };
   handleDecrement = (habit) => {

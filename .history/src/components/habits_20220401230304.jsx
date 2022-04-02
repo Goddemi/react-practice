@@ -14,32 +14,20 @@ class Habits extends Component {
   };
 
   handleIncrement = (habit) => {
-    {
-      const habits = [...this.state.habits]; // habits에 있는 배열을 하나하나씩 새로운 배열로 복사해 오는것을 말한다.
-      const index = habits.indexOf(habit);
-      habits[index].count++;
-      this.setState({ habits: habits }); // this.state가 아닌 이유는 새로운 배열을 만들었기 때문 . key와 const해준 배열의 관계
-      // setState(key: value) 인것. key = value이라면 한번만 써도 된다. 업데이트할 대상이 무엇인가? : habits key가 habits인것
-    }
+    console.log(`handleIncrement ${habit}`);
   };
   handleDecrement = (habit) => {
-    console.log(`handleDecrement ${habit.name}`);
+    console.log(`handleDecrement ${habit}`);
   };
   handleDelete = (habit) => {
-    console.log(`handleDelete ${habit.name}`);
+    console.log(`handleDelete ${habit}`);
   };
 
   render() {
     return (
       <ul>
         {this.state.habits.map((habit) => (
-          <Habit
-            key={habit.id}
-            habit={habit}
-            onIncrement={this.handleIncrement}
-            onDecrement={this.handleDecrement}
-            OnDelete={this.handleDelete}
-          />
+          <Habit key={habit.id} habit={habit} />
         ))}
       </ul>
     );
