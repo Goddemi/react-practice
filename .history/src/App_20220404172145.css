@@ -55,10 +55,6 @@ body {
   flex-direction: column;
 }
 
-.content span {
-  margin-bottom: 10px;
-}
-
 .list-title {
   display: block;
 }

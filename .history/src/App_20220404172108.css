@@ -31,12 +31,11 @@ body {
   position: absolute;
   left: 30%;
   top: 12%;
-  color: rgba(0, 0, 0, 0.4);
 }
 
 .main {
   display: flex;
-  height: 550px;
+  height: 600px;
 }
 
 .lists {
@@ -53,10 +52,6 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-}
-
-.content span {
-  margin-bottom: 10px;
 }
 
 .list-title {

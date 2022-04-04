@@ -11,6 +11,7 @@ function App() {
   ]);
 
   let [selectedTitle, selectedTitleChange] = useState(0);
+
   let [detailWindow, detailWindowChange] = useState(false);
 
   let [inputValue, inputValueChange] = useState("");
@@ -50,19 +51,10 @@ function App() {
       <footer className="footer">
         <input
           onChange={(e) => {
-            inputValueChange(e.target.value);
+            e.target.value;
           }}
         />
-        <button
-          onClick={() => {
-            let newWritingTitle = [...writingTitle];
-            newWritingTitle.unshift(inputValue);
-            writingTitleChange(newWritingTitle);
-          }}
-        >
-          {" "}
-          click !{" "}
-        </button>
+        <button> click ! </button>
       </footer>
     </>
   );

@@ -11,6 +11,7 @@ function App() {
   ]);
 
   let [selectedTitle, selectedTitleChange] = useState(0);
+
   let [detailWindow, detailWindowChange] = useState(false);
 
   let [inputValue, inputValueChange] = useState("");
@@ -53,16 +54,7 @@ function App() {
             inputValueChange(e.target.value);
           }}
         />
-        <button
-          onClick={() => {
-            let newWritingTitle = [...writingTitle];
-            newWritingTitle.unshift(inputValue);
-            writingTitleChange(newWritingTitle);
-          }}
-        >
-          {" "}
-          click !{" "}
-        </button>
+        <button> click ! </button>
       </footer>
     </>
   );
