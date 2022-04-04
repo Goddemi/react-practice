@@ -27,7 +27,7 @@ function App() {
                 onClick={() => {
                   detailWindow === false
                     ? detailWindowChange(true)
-                    : detailWindowChange(true);
+                    : detailWindowChange(false);
 
                   selectedTitleChange(i);
                 }}
@@ -42,7 +42,7 @@ function App() {
         <div className="content">
           <span>Details</span>
           {detailWindow === true ? (
-            <Detail writingTitle={writingTitle} selectedTitle={selectedTitle} />
+            <Detail writingTitle={writingTitle} />
           ) : null}
         </div>
       </div>
@@ -57,9 +57,7 @@ function App() {
 function Detail(props) {
   return (
     <div className="detail">
-      <span className="detail-title">
-        {props.writingTitle[props.selectedTitle]}{" "}
-      </span>
+      <span className="detail-title">{props.writingTitle[props.]} </span>
       <span className="detail-info">bbb</span>
     </div>
   );

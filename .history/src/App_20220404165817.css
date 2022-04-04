@@ -30,7 +30,7 @@ body {
 .guidance {
   position: absolute;
   left: 30%;
-  top: 12%;
+  top: 8%;
 }
 
 .main {
@@ -66,12 +66,6 @@ body {
 
 input {
   margin: 10px;
-}
-
-.detail {
-  height: 80%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .App-header {

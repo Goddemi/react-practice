@@ -27,7 +27,7 @@ function App() {
                 onClick={() => {
                   detailWindow === false
                     ? detailWindowChange(true)
-                    : detailWindowChange(true);
+                    : detailWindowChange(false);
 
                   selectedTitleChange(i);
                 }}

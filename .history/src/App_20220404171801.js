@@ -25,9 +25,7 @@ function App() {
               <div
                 className="list"
                 onClick={() => {
-                  detailWindow === false
-                    ? detailWindowChange(true)
-                    : detailWindowChange(true);
+                  detailWindow === false ? detailWindowChange(true) : null;
 
                   selectedTitleChange(i);
                 }}

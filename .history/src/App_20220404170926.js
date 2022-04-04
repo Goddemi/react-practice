@@ -10,8 +10,6 @@ function App() {
     "TYPESCRIPT",
   ]);
 
-  let [selectedTitle, selectedTitleChange] = useState(0);
-
   let [detailWindow, detailWindowChange] = useState(false);
 
   return (
@@ -20,16 +18,14 @@ function App() {
       <div className="main">
         <div className="guidance"> 💨 Click title for detail :)</div>
         <div className="lists">
-          {writingTitle.map((title, i) => {
+          {writingTitle.map((title) => {
             return (
               <div
                 className="list"
                 onClick={() => {
                   detailWindow === false
                     ? detailWindowChange(true)
-                    : detailWindowChange(true);
-
-                  selectedTitleChange(i);
+                    : detailWindowChange(false);
                 }}
               >
                 <span className="list-title"> {title} ✨</span>
@@ -42,7 +38,7 @@ function App() {
         <div className="content">
           <span>Details</span>
           {detailWindow === true ? (
-            <Detail writingTitle={writingTitle} selectedTitle={selectedTitle} />
+            <Detail writingTitle={writingTitle} />
           ) : null}
         </div>
       </div>
@@ -54,12 +50,10 @@ function App() {
   );
 }
 
-function Detail(props) {
+function Detail() {
   return (
     <div className="detail">
-      <span className="detail-title">
-        {props.writingTitle[props.selectedTitle]}{" "}
-      </span>
+      <span className="detail-title">{writingTitle} </span>
       <span className="detail-info">bbb</span>
     </div>
   );

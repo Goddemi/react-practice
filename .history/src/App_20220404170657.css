@@ -30,7 +30,7 @@ body {
 .guidance {
   position: absolute;
   left: 30%;
-  top: 12%;
+  top: 8%;
 }
 
 .main {
@@ -69,7 +69,7 @@ input {
 }
 
 .detail {
-  height: 80%;
+  height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.1);
 }

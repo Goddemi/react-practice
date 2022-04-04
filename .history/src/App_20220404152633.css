@@ -27,11 +27,6 @@ body {
   font-size: 1.5rem;
   margin-bottom: 25px;
 }
-.guidance {
-  position: absolute;
-  left: 30%;
-  top: 12%;
-}
 
 .main {
   display: flex;
@@ -43,15 +38,9 @@ body {
   text-align: center;
 }
 
-/* .list:first-child ::after {
-  content: "";
-} */
-
 .content {
   width: 50%;
   text-align: center;
-  display: flex;
-  flex-direction: column;
 }
 
 .list-title {
@@ -66,12 +55,6 @@ body {
 
 input {
   margin: 10px;
-}
-
-.detail {
-  height: 80%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .App-header {

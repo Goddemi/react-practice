@@ -10,28 +10,15 @@ function App() {
     "TYPESCRIPT",
   ]);
 
-  let [selectedTitle, selectedTitleChange] = useState(0);
-
-  let [detailWindow, detailWindowChange] = useState(false);
-
   return (
     <>
       <div className="nav-bar">React Basic Blog</div>
       <div className="main">
         <div className="guidance"> 💨 Click title for detail :)</div>
         <div className="lists">
-          {writingTitle.map((title, i) => {
+          {writingTitle.map((title) => {
             return (
-              <div
-                className="list"
-                onClick={() => {
-                  detailWindow === false
-                    ? detailWindowChange(true)
-                    : detailWindowChange(true);
-
-                  selectedTitleChange(i);
-                }}
-              >
+              <div className="list" onClick={() => {}}>
                 <span className="list-title"> {title} ✨</span>
                 <span className="list-date">2022. 01. 08</span>
                 <hr />
@@ -41,9 +28,7 @@ function App() {
         </div>
         <div className="content">
           <span>Details</span>
-          {detailWindow === true ? (
-            <Detail writingTitle={writingTitle} selectedTitle={selectedTitle} />
-          ) : null}
+          <Detail />
         </div>
       </div>
       <footer className="footer">
@@ -52,17 +37,15 @@ function App() {
       </footer>
     </>
   );
-}
 
-function Detail(props) {
-  return (
-    <div className="detail">
-      <span className="detail-title">
-        {props.writingTitle[props.selectedTitle]}{" "}
-      </span>
-      <span className="detail-info">bbb</span>
-    </div>
-  );
+  function Detail() {
+    return (
+      <div className="detail">
+        <span className="detail-title"> </span>
+        <span className="detail-info"> </span>
+      </div>
+    );
+  }
 }
 
 export default App;
