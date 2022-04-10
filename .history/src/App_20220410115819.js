@@ -16,7 +16,7 @@ function App() {
         </Container>
       </Navbar>
       <div className="background"></div>
-      <div className="greeting">Welcome. It's a time to go travel ! </div>
+      <div className="greeting">Welcome. It's timing to go travel ! </div>
     </>
   );
 }
