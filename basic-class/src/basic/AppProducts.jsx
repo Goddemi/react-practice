@@ -1,13 +1,29 @@
-import React, { useState } from 'react';
-import './App.css';
-import Products from './components/Products';
+import React, { useState } from "react";
+import "./App.css";
+import Products from "./components/Products";
+import {
+  useQuery,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 export default function AppProducts() {
   const [showProducts, setShowProducts] = useState(true);
+  const client = useQueryClient();
   return (
-    <div>
+    <QueryClientProvider client={queryClient}>
       {showProducts && <Products />}
       <button onClick={() => setShowProducts((show) => !show)}>Toggle</button>
-    </div>
+      <button
+        onClick={() => {
+          client.invalidateQueries(["products"]);
+        }}
+      >
+        버튼
+      </button>
+    </QueryClientProvider>
   );
 }
